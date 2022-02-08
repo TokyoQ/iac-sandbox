@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion : "2010-09-09"
+Resources:
+  MyEC2Instance: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: "ami-0c635ee4f691a2310"
+      InstanceType: "t2.micro"
+      BlockDeviceMappings: 
+      - DeviceName: "/dev/sdm"
+        Ebs: 
+          VolumeType: "gp3"
+          DeleteOnTermination: "false"
+          VolumeSize: "50"
+      - DeviceName: "/dev/sdk"
+        NoDevice: {}
