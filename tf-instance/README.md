@@ -1,0 +1,3 @@
+# Terraform example
+
+`terraform apply`
