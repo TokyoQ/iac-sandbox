@@ -3,3 +3,9 @@
 *.tfstate
 .terraform/
 .terraform*
+*.tfstate.backup
+
+# CDK
+test/
+cdk.context.json
+package-lock.json
