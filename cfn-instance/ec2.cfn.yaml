@@ -1,11 +1,11 @@
 AWSTemplateFormatVersion : "2010-09-09"
 Resources:
-  MyEC2Instance: 
+  AlecsCfnEc2: 
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-0c635ee4f691a2310"
       InstanceType: "t2.micro"
-      BlockDeviceMappings: 
+      BlockDeviceMappings:
       - DeviceName: "/dev/sdm"
         Ebs: 
           VolumeType: "gp3"
@@ -13,3 +13,6 @@ Resources:
           VolumeSize: "50"
       - DeviceName: "/dev/sdk"
         NoDevice: {}
+      Tags:
+        - Key: Name
+          Value: AlecsCfnEc2
